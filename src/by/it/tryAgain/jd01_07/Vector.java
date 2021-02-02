@@ -1,5 +1,7 @@
 package by.it.tryAgain.jd01_07;
 
+import java.util.Arrays;
+
 public class Vector extends Var {
 
     private double [] value;
@@ -16,5 +18,8 @@ public class Vector extends Var {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Vector{" +"value=" + Arrays.toString(value) +'}';
+    }
 }

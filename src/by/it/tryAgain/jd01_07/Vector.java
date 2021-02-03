@@ -1,7 +1,5 @@
 package by.it.tryAgain.jd01_07;
 
-import java.util.Arrays;
-
 public class Vector extends Var {
 
     private double [] value;
@@ -15,11 +13,26 @@ public class Vector extends Var {
     }
 
     public Vector(String strVector){
-
+        strVector.trim().replace("{","")
+                        .replace("}","")
+                        .replace(" ","");
+        String [] strVec = strVector.split(",");
+        value = new double[strVec.length];
+        for (int i = 0; i < strVec.length; i++) {
+            value[i] = Double.parseDouble(strVec[i]);
+        }
     }
 
     @Override
     public String toString() {
-        return "Vector{" +"value=" + Arrays.toString(value) +'}';
+
+        StringBuilder strBuilder = new StringBuilder("{");
+        String delimiter = "";
+        for (double v : value) {
+            strBuilder.append(delimiter).append(v);
+            delimiter=", ";
+        }
+        strBuilder.append("}");
+        return strBuilder.toString();
     }
 }

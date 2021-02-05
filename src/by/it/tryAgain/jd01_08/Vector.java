@@ -1,6 +1,6 @@
-package by.it.tryAgain.jd01_07;
+package by.it.tryAgain.jd01_08;
 
-public class Vector extends Var {
+class Vector extends Var implements Operation{
 
     private double [] value;
 

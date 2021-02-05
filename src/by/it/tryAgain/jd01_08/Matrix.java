@@ -1,8 +1,6 @@
-package by.it.tryAgain.jd01_07;
+package by.it.tryAgain.jd01_08;
 
-import java.util.Arrays;
-
-public class Matrix extends Var {
+class Matrix extends Var implements Operation{
 
     private double[][] value;
 
